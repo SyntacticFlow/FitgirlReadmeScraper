@@ -30,4 +30,6 @@
 		</ItemGroup>
 		<Copy SourceFiles="@(_PublishedFiles)" DestinationFiles="@(_PublishedFiles->'$(PublishCopyDestination)\%(RecursiveDir)%(Filename)%(Extension)')" />
 	</Target>
+
+	<Import Project="..\..\Development.Build.targets" Condition="Exists('..\..\Development.Build.targets')" />
 </Project>
